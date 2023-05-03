@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: hsl(233, 12%, 13%);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+.input-checkbox {
+  display: flex;
+  align-items: center;
+  row-gap: 5px;
+  column-gap: 5px;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  row-gap: 5px;
+  column-gap: 5px;
+  position: relative;
+  width: 0%;
+  transition-property: width;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in;
+}
+
+.search-icon input[type="search"] {
+  display: none;
+  padding: 8px 0px;
+  padding-left: 4px;
+  padding-right: 30px;
+  transition-property: display;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in;
+}
+
+input[type="checkbox"]:checked
+  ~ .input-checkbox
+  .search-icon
+  input[type="search"] {
+  display: grid;
+}
+
+input[type="checkbox"]:checked ~ .input-checkbox .search-icon {
+  width: 100%;
+}
+
+.search-icon a {
+  width: 11%;
+  position: absolute;
+  right: 8px;
+  top: 10px;
+}
+
+.search-button {
+  display: grid !important;
+  text-align: center;
+}
+
+.search-button span {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(228, 39%, 23%);
+  padding: 7px 15px;
+  border: none;
+  font-weight: bold;
+  border-radius: 23px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.search-button span:hover {
+  color: white;
+  background-color: hsl(227, 12%, 61%);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* section 2 Css */
+.main_content {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  padding: 0px 15px;
+  padding-bottom: 70px;
+  padding-top: 50px;
+  background-image: linear-gradient(
+    250deg,
+    hsl(295deg 76% 51%) 0%,
+    hsl(284deg 70% 73%) 26%,
+    hsl(257deg 70% 86%) 39%,
+    hsl(202deg 92% 90%) 50%,
+    hsl(215deg 77% 81%) 61%,
+    hsl(221deg 73% 70%) 74%,
+    hsl(220deg 76% 51%) 100%
+  );
+  position: relative;
+  font-family: "Eudoxus Sans";
+  row-gap: 50px;
+}
+.heading-section-A {
+  display: grid;
+  position: relative;
+  justify-items: center;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.heading-section-A h1 {
+  font-weight: 900;
+  font-size: 133px;
+  color: hsl(228, 39%, 23%);
+  text-align: center;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  position: absolute;
+  top: 92px;
+  right: 15px;
+}
+
+.image-section-B {
+  justify-self: end;
+}
+
+.image-section-B img {
+  border-radius: 180px 0px 0px 0px;
+}
+
+.image-section-C {
+  justify-self: end;
+  position: absolute;
+  top: 68%;
+  right: 0;
+}
